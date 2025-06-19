@@ -5,7 +5,7 @@
             <div class="flex">
                 <!-- Logo -->
                 <div class="shrink-0 flex items-center">
-                    <a href="{{ route('dashboard') }}">
+                    <a href="{{ route('home') }}">
                         <x-application-logo class="block h-9 w-auto fill-current text-gray-800" />
                     </a>
                 </div>
@@ -27,6 +27,8 @@
                             <div>
                                 @auth
                                 {{ Auth::user()->name }}
+                                @else
+                                    <a class="mx-4" href="{{ route('login') }}">Login</a> <a class="mr-4" href="{{ route('register') }}">Register</a> <span class="text-primary">Hello User</span>
                                 @endauth
                             </div>
 
