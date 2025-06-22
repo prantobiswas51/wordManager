@@ -11,8 +11,12 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('part_b_s', function (Blueprint $table) {
+        Schema::create('partbs', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('story_id')->nullable()->constrained()->onDelete('cascade');
+            $table->string('part_b_qs');
+            $table->string('part_b_ans');
+            $table->string('part_b_note')->nullable();
             $table->timestamps();
         });
     }
@@ -22,6 +26,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('part_b_s');
+        Schema::dropIfExists('partbs');
     }
 };

@@ -2,9 +2,20 @@
 
 namespace App\Models;
 
+use App\Models\Story;
 use Illuminate\Database\Eloquent\Model;
 
-class PartA extends Model
+class Parta extends Model
 {
-    //
+    protected $fillable = [
+        'story_id',
+        'part_a_qs',
+        'part_a_ans',
+        'part_a_note'
+    ];
+
+    public function story()
+    {
+        return $this->belongsTo(Story::class);
+    }
 }

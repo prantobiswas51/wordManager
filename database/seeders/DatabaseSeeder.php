@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 use App\Models\User;
+use App\Models\Year;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
@@ -15,9 +16,22 @@ class DatabaseSeeder extends Seeder
     {
         // User::factory(10)->create();
 
-        User::factory()->create([
-            'name' => 'Test User',
-            'email' => 'test@example.com',
+        // User::factory()->create([
+        //     'name' => 'Test User',
+        //     'email' => 'test@example.com',
+        // ]);
+
+        Year::create([
+            'year' => 'First Year',
+        ]);
+        Year::create([
+            'year' => 'Second Year',
+        ]);
+        Year::create([
+            'year' => 'Third Year',
+        ]);
+        Year::create([
+            'year' => 'Fourth Year',
         ]);
     }
 }

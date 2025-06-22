@@ -5,7 +5,7 @@
         <div class="bg-white rounded-lg shadow-xl p-6 w-full max-w-sm relative">
             <h3 class="text-xl font-semibold mb-4 text-gray-800">Add New Word</h3>
             <form action="{{ route('save_word') }}" method="POST" class="space-y-4">
-                @csrf
+                @csrf 
                 <div>
                     <label for="main_word" class="block text-sm font-medium text-gray-700 mb-1">Main Word</label>
                     <input type="text" id="main_word" name="main_word" required

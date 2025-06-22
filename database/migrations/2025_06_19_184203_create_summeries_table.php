@@ -11,11 +11,10 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('words', function (Blueprint $table) {
+        Schema::create('summeries', function (Blueprint $table) {
             $table->id();
-            $table->string('english_word')->unique();
-            $table->string('meaning');
-            $table->string('notes');
+            $table->foreignId('story_id')->nullable()->constrained()->onDelete('cascade');
+            $table->string('summery_content');
             $table->timestamps();
         });
     }
@@ -25,6 +24,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('words');
+        Schema::dropIfExists('summeries');
     }
 };

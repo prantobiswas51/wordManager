@@ -7,9 +7,16 @@
 
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-            <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
-                
 
+            <div class=" p-2 border m-2 bg-red-400">
+                Add Part A Questiond  fewf
+            </div>
+
+            <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
+
+                <div class="border p-2">
+                    Add Part A Question
+                </div>
 
             </div>
         </div>
